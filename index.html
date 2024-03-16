@@ -9,7 +9,30 @@
   </head>
   <body>
     <div class="main-section">
+      <div class="header-container">
+        <p class="side-text">MAGIC</p>
+        <p id="title">Etch A Sketch</p>
+        <p class="side-text">SCREEN</p>
+      </div>
       <div class="container" id="main-container"></div>
+      <div class="control-container">
+        <div class="density-control">
+          <input
+            type="range"
+            id="canvas-size"
+            name="canvas-size"
+            min="16"
+            max="30"
+            step="2"
+          />
+          <!-- <label for="canvas-size">Density</label> -->
+        </div>
+        <div class="color-control">
+          <button>NORMAL</button>
+          <button>PSYCH</button>
+          <button>CLEAR</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>

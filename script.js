@@ -34,8 +34,4 @@ function darkenSquare(id) {
   return (rgbArray[id] -= 25.5);
 }
 
-// divClass.addEventListener("hover", function (event) {
-//   div.style.backgroundColor = "lightblue";
-// });
-
 createDivs();
