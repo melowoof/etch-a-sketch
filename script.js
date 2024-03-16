@@ -21,25 +21,15 @@ function createDivs(nbrDivs = 16) {
     div.id = i;
 
     if (!isNormal) {
-      div.addEventListener("mouseenter", function (event) {
-        div.style.backgroundColor = `rgb(${Math.floor(
-          Math.random() * 256
-        )}, ${Math.floor(Math.random() * 256)}, ${Math.floor(
-          Math.random() * 256
-        )})`;
-      });
+      div.addEventListener("mouseenter", psychedelicEvent);
     } else {
-      div.addEventListener("mouseenter", function (event) {
-        let rgbVal = darkenSquare(i);
-        div.style.backgroundColor = `rgb(${rgbVal}, ${rgbVal}, ${rgbVal})`;
-      });
+      div.addEventListener("mouseenter", normalEvent);
     }
 
     divArray.push(div);
     rgbArray.push(255);
   }
 
-  // changeMode();
   for (const div of divArray) {
     container.appendChild(div);
   }
@@ -48,41 +38,32 @@ function createDivs(nbrDivs = 16) {
 function normalEvent(event) {
   let div = event.target;
   let rgbVal = darkenSquare(div.id);
-  div.removeEventListener("mouseenter", normalEvent);
-  div.removeEventListener("mouseenter", psychedelicEvent);
   div.style.backgroundColor = `rgb(${rgbVal}, ${rgbVal}, ${rgbVal})`;
 }
 
 function psychedelicEvent(event) {
   let div = event.target;
-  div.removeEventListener("mouseenter", normalEvent);
-  div.removeEventListener("mouseenter", psychedelicEvent);
   div.style.backgroundColor = `rgb(${Math.floor(
     Math.random() * 256
   )}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
 }
 
 function changeMode() {
+  for (const div of container.children) {
+    div.removeEventListener("mouseenter", normalEvent);
+    div.removeEventListener("mouseenter", psychedelicEvent);
+  }
+
   if (!isNormal) {
     for (const div of container.children) {
-      div.addEventListener("mouseenter", function (event) {
-        div.style.backgroundColor = `rgb(${Math.floor(
-          Math.random() * 256
-        )}, ${Math.floor(Math.random() * 256)}, ${Math.floor(
-          Math.random() * 256
-        )})`;
-      });
+      div.removeEventListener("mouseenter", normalEvent);
+      div.addEventListener("mouseenter", psychedelicEvent);
     }
   } else {
     for (const div of container.children) {
-      div.addEventListener("mouseenter", function (event) {
-        let rgbVal = darkenSquare(div.id);
-        div.style.backgroundColor = `rgb(${rgbVal}, ${rgbVal}, ${rgbVal})`;
-      });
+      div.addEventListener("mouseenter", normalEvent);
     }
   }
-  // isNormal = !isNormal;
-  // !isNormal;
 }
 
 function removeDivs() {
@@ -101,8 +82,6 @@ normalButton.addEventListener("click", function () {
 
   isNormal = true;
   changeMode();
-  // normalButton.disabled = true;
-  // psychButton.disabled = false;
 });
 
 psychButton.addEventListener("click", function () {
@@ -111,8 +90,6 @@ psychButton.addEventListener("click", function () {
 
   isNormal = false;
   changeMode();
-  // normalButton.disabled = false;
-  // psychButton.disabled = true;
 });
 
 clearButton.addEventListener("click", function () {
@@ -129,4 +106,3 @@ canvasSizeInput.addEventListener("input", function () {
 //
 
 createDivs();
-// changeMode();
