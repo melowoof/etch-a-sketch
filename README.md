@@ -2,4 +2,4 @@
 
 A rendition of Etch-A-Sketch, as part of the The Odin Project's curriculum.
 
-**Live Preview** - [link](https://github.com/melowoof/odin-etch-a-sketch)
+**Live Preview** - [link](https://melowoof.github.io/odin-etch-a-sketch/)
