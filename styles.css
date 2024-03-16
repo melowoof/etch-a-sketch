@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Ephesis&display=swap");
 
+:root {
+  --shadow: rgba(0, 0, 0, 0.65);
+}
+
 * {
   margin: 0;
   /* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -35,20 +39,17 @@ body {
 
 .main-section {
   outline: 2px solid black;
-  box-shadow: -2px 2px 2px black, 1px -1px 2px black, inset 1px -1px 2px black;
-  background-color: #aa2c2b;
+  box-shadow: -2px 2px 5px var(--shadow), 1px -1px 4px var(--shadow), inset -1px 0px 2px var(--shadow), 3px 3px 5px var(--shadow), inset 2px -2px 4px var(--shadow);
+  background-color: #a82a27;
   border-radius: 0.5%;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-evenly; */
-  /* gap: 20px; */
   align-items: center;
   width: 85vw;
   height: 65vw;
 }
 
 .header-container {
-  /* outline: 1px solid black; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,8 +61,8 @@ body {
 #title {
   font-family: "Ephesis";
   font-weight: 800;
-  font-style: it;
-  font-size: 6vw;
+  font-style: normal;
+  font-size: 7vw;
   color: #e1bc65;
   text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.85);
 }
@@ -74,19 +75,18 @@ body {
 }
 
 .container {
-  outline: 2px solid black;
+  outline: 2.5px solid black;
+  border-radius: 1%;
   width: 60vw;
   height: 40vw;
-  /* border-radius: 1%; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  box-shadow: -1px 0px 4px black;
+  box-shadow: -3px 3px 4px var(--shadow), 3px -3px 4px var(--shadow);
 }
 
 .control-container {
-  /* outline: 1px solid black; */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -102,7 +102,6 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #e1bc65;
-  /* margin-left: 25px; */
   font-style: italic;
   text-shadow: 0.5px 0.5px 1px black;
 }
@@ -145,7 +144,6 @@ input[type="range"]::-moz-range-thumb {
   display: flex;
   gap: 15px;
   margin-left: auto;
-  /* margin-right: 25px; */
 }
 
 .color-control > button {
@@ -161,12 +159,10 @@ input[type="range"]::-moz-range-thumb {
 .color-control .selected {
   box-shadow: 0px 0px 3px black, inset -2px 2px 1px gray;
   text-shadow: 0.5px 0.5px 1px black;
-  /* font-style: normal; */
 }
 
 #clear {
   color: #aa2c2b;
-  /* background-color: #a1392f; */
   font-weight: bold;
 }
 
