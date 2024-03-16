@@ -17,6 +17,7 @@
       <div class="container" id="main-container"></div>
       <div class="control-container">
         <div class="density-control">
+          <label for="canvas-size">CANVAS SIZE</label>
           <input
             type="range"
             id="canvas-size"
@@ -24,13 +25,13 @@
             min="16"
             max="30"
             step="2"
+            value="16"
           />
-          <!-- <label for="canvas-size">Density</label> -->
         </div>
         <div class="color-control">
-          <button>NORMAL</button>
-          <button>PSYCH</button>
-          <button>CLEAR</button>
+          <button class="selected" id="normal">NORMAL</button>
+          <button id="psychedelic">PSYCH</button>
+          <button id="clear">CLEAR</button>
         </div>
       </div>
     </div>
