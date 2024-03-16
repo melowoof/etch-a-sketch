@@ -16,7 +16,7 @@ body {
   /* flex-direction: column; */
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vw;
 }
 
 .main-section {
@@ -40,7 +40,7 @@ body {
   align-items: center;
   height: 10vw;
   width: 100%;
-  gap: 30px;
+  gap: 24px;
 }
 
 #title {
@@ -53,7 +53,7 @@ body {
 }
 
 .side-text {
-  font-size: 2.4vw;
+  font-size: 2.2vw;
   font-style: italic;
   color: #e1bc65;
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.65);
@@ -94,7 +94,38 @@ body {
 }
 
 #canvas-size {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 10%;
   width: 25vw;
+  height: 4px;
+  background-color: black;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 16px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 16px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: red;
 }
 
 .color-control {
@@ -116,6 +147,7 @@ body {
 
 .color-control .selected {
   box-shadow: 0px 0px 3px black, inset -2px 2px 1px gray;
+  text-shadow: 0.5px 0.5px 1px black;
   /* font-style: normal; */
 }
 
