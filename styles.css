@@ -38,8 +38,8 @@ body {
 .square {
   outline: 1px solid black;
   background-color: white;
-  /* width: calc(100% / 16);
-  height: calc(100vh / 16); */
+  /* width: calc(100% / 16); */
+  /* height: calc(100% / 16); */
   /* transition: 0.1s; */
 }
 
