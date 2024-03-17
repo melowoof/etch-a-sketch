@@ -170,7 +170,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .square {
-  outline: 1px solid rgba(0, 0, 0, 0.01);
+  outline: 1px solid rgba(0, 0, 0, 0.04);
   background-color: white;
   /* width: calc(100% / 16); */
   /* height: calc(100% / 16); */
