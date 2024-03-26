@@ -16,8 +16,8 @@ function createDivs(nbrDivs = 16) {
     let div = document.createElement("div");
 
     div.classList.add("square");
-    div.style.width = 40 / nbrDivs + "vw";
-    div.style.height = 40 / nbrDivs + "vw";
+    div.style.width = 30 / nbrDivs + "rem";
+    div.style.height = 30 / nbrDivs + "rem";
     div.id = i;
 
     if (!isNormal) {
